@@ -13,7 +13,7 @@ docker image from a sample application
  Change DOCKERHUB_USER and DOCKERHUB_PASSWORD in your go-server http://localhost:8153/go/environments/contacts-deployment/show
 
 
-## Steps to set up infrastruce
+### Steps to set up infrastruce
 
 ##### Setup docker go-agent
 
