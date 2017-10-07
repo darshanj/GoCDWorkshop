@@ -1,0 +1,3 @@
+2017-10-07 07:30:46,988  INFO [Thread-75] LdapPlugin:49 - Loading plugin cd.go.authentication.ldap version 1.0.1-49
+2017-10-07 07:30:47,119  WARN [Thread-75] LdapPlugin:59 - Request go.plugin-settings.get-view is not supported by plugin.
+2017-10-07 07:30:47,137  WARN [Thread-75] LdapPlugin:59 - Request go.plugin-settings.get-configuration is not supported by plugin.

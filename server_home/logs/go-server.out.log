@@ -1,0 +1,2 @@
+[Sat Oct  7 07:30:28 UTC 2017] Starting Go Server with command: java -server -Djava.security.egd=file:/dev/./urandom -Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m -Dgo.console.stdout=true -Duser.language=en -Djruby.rack.request.size.threshold.bytes=30000000 -Duser.country=US -Dcruise.config.dir=/go-working-dir/config -Dcruise.config.file=/go-working-dir/config/cruise-config.xml -Dcruise.server.port=8153 -Dcruise.server.ssl.port=8154 -jar /go-server/go.jar
+[Sat Oct  7 07:30:28 UTC 2017] Starting Go Server in directory: /go-working-dir
