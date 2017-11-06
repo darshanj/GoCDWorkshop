@@ -6,50 +6,32 @@
     <environment name="contacts-ui-docker">
       <environmentvariables>
         <variable name="DOCKERHUB_USER">
-          <value>kaushikc</value>
+          <value>docker_user</value>
         </variable>
         <variable name="DOCKERHUB_PASSWORD" secure="true">
-          <encryptedValue>ydpVCoF5MebBP5Xa6sG5Wg==</encryptedValue>
+          <encryptedValue>docker_password</encryptedValue>
         </variable>
       </environmentvariables>
       <agents>
-        <physical uuid="a3cddd93-22c3-4e9a-8954-7000b9cb462e" />
       </agents>
     </environment>
     <environment name="contacts-api-docker">
       <environmentvariables>
         <variable name="DOCKERHUB_USER">
-          <value>kaushikc</value>
+          <value>docker_user</value>
         </variable>
         <variable name="DOCKERHUB_PASSWORD" secure="true">
-          <encryptedValue>ydpVCoF5MebBP5Xa6sG5Wg==</encryptedValue>
+          <encryptedValue>docker_password</encryptedValue>
         </variable>
       </environmentvariables>
       <agents>
-        <physical uuid="a3cddd93-22c3-4e9a-8954-7000b9cb462e" />
       </agents>
     </environment>
     <environment name="contacts-db-docker">
       <agents>
-        <physical uuid="a3cddd93-22c3-4e9a-8954-7000b9cb462e" />
       </agents>
     </environment>
   </environments>
   <agents>
-    <agent hostname="77ab846748ef" ipaddress="172.20.0.5" uuid="5e2f5854-6124-44aa-a5ee-420f58bde5fd">
-      <resources>
-        <resource>deployer</resource>
-      </resources>
-    </agent>
-    <agent hostname="1f9e6ce84931" ipaddress="172.20.0.3" uuid="9d64b104-75af-4038-8008-1234abda8599">
-      <resources>
-        <resource>yarn</resource>
-      </resources>
-    </agent>
-    <agent hostname="4c86f6c62f8f" ipaddress="172.20.0.4" uuid="a3cddd93-22c3-4e9a-8954-7000b9cb462e">
-      <resources>
-        <resource>docker</resource>
-      </resources>
-    </agent>
   </agents>
 </cruise>

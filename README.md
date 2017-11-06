@@ -10,8 +10,25 @@ docker image from a sample application
 
 ### Post that
 
- Change DOCKERHUB_USER and DOCKERHUB_PASSWORD in your go-server http://localhost:8153/go/environments/contacts-deployment/show
+ Change DOCKERHUB_USER and DOCKERHUB_PASSWORD in your go-server 
+ http://localhost:8153/go/environments/contacts-ui-docker/show
+ http://localhost:8153/go/environments/contacts-api-docker/show
+ http://localhost:8153/go/environments/contacts-db-docker/show
 
+
+### Setup pipelines
+Add following in go cd config:
+```
+<config-repos> 
+	<config-repo pluginId="yaml.config.plugin" id="repo1"> <git url="https://github.com/darshanj/contacts-ui.git" /> 
+	</config-repo> 
+	<config-repo pluginId="yaml.config.plugin" id="repo2"> <git url="https://github.com/darshanj/contacts-api.git" /> 
+	</config-repo> 
+</config-repos>
+```
+
+### Setup postgres DB in cluster
+Run db-install in pipelines
 
 ### Steps to set up infrastruce
 
@@ -21,8 +38,9 @@ docker image from a sample application
 ```chown go:go /var/run/docker.sock```
 
 ##### Setup deployment go-agent
-
-```cp cp ~/.minikube/ca.crt ~/.minikube/apiserver.key ~/.minikube/apiserver.crt files/go-agent/kube-config/```
+``` Edit files/go-agent/kube-config/kube-config.yml and change your minikube ip
+at line: server: https://192.168.99.104:8443
+```cp ~/.minikube/ca.crt ~/.minikube/apiserver.key ~/.minikube/apiserver.crt files/go-agent/kube-config/```
 ```docker exec -it gocdworkshop_go-agent-deployment_1 bash``` <br />
 ```su - go``` <br />
 ```kubectl get nodes``` <br />
