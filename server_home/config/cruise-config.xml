@@ -29,6 +29,11 @@
         <physical uuid="a3cddd93-22c3-4e9a-8954-7000b9cb462e" />
       </agents>
     </environment>
+    <environment name="contacts-db-docker">
+      <agents>
+        <physical uuid="a3cddd93-22c3-4e9a-8954-7000b9cb462e" />
+      </agents>
+    </environment>
   </environments>
   <agents>
     <agent hostname="77ab846748ef" ipaddress="172.20.0.5" uuid="5e2f5854-6124-44aa-a5ee-420f58bde5fd">
