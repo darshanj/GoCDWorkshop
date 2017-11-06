@@ -9,11 +9,9 @@
           <value>docker_user</value>
         </variable>
         <variable name="DOCKERHUB_PASSWORD" secure="true">
-          <encryptedValue>docker_password</encryptedValue>
+          <encryptedValue>ydpVCoF5MebBP5Xa6sG5Wg==</encryptedValue>
         </variable>
       </environmentvariables>
-      <agents>
-      </agents>
     </environment>
     <environment name="contacts-api-docker">
       <environmentvariables>
@@ -21,17 +19,10 @@
           <value>docker_user</value>
         </variable>
         <variable name="DOCKERHUB_PASSWORD" secure="true">
-          <encryptedValue>docker_password</encryptedValue>
+          <encryptedValue>ydpVCoF5MebBP5Xa6sG5Wg==</encryptedValue>
         </variable>
       </environmentvariables>
-      <agents>
-      </agents>
     </environment>
-    <environment name="contacts-db-docker">
-      <agents>
-      </agents>
-    </environment>
+    <environment name="contacts-db-docker" />
   </environments>
-  <agents>
-  </agents>
 </cruise>
