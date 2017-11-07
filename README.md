@@ -39,16 +39,12 @@ Run db-install in pipelines
 ```chown go:go /var/run/docker.sock```
 
 ##### Setup deployment go-agent
-1. Edit files/go-agent/kube-config/kube-config.yml and change your minikube ip
-at line: 
 
-```server: https://192.168.99.104:8443```
-
-2. Copy key and crt files
+1. Copy key and crt files
 
 ```cp ~/.minikube/ca.crt ~/.minikube/apiserver.key ~/.minikube/apiserver.crt files/go-agent/kube-config/```
 
-3. Check if deployment goagent is able to access minikube
+2. Check if deployment goagent is able to access minikube
 
 ```docker exec -it gocdworkshop_go-agent-deployment_1 bash``` <br />
 ```su - go``` <br />
