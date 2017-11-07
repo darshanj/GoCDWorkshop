@@ -1,0 +1,2 @@
+FROM library/postgres
+ADD init.sh /docker-entrypoint-initdb.d/
