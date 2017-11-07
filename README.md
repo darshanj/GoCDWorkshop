@@ -12,9 +12,9 @@ docker image from a sample application
 
 Change DOCKERHUB_USER and DOCKERHUB_PASSWORD in your go-server for following environments:
 
- 1. (http://localhost:8153/go/environments/contacts-ui-docker/show)
- 2. (http://localhost:8153/go/environments/contacts-api-docker/show)
- 3. (http://localhost:8153/go/environments/contacts-db-docker/show)
+ 1. http://localhost:8153/go/environments/contacts-ui-docker/show
+ 2. http://localhost:8153/go/environments/contacts-api-docker/show
+ 3. http://localhost:8153/go/environments/contacts-db-docker/show
 
 
 ### Setup pipelines
