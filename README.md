@@ -5,8 +5,8 @@ docker image from a sample application
 
 ### Commands:
 
- docker-compose build <br/>
- docker-compose up <br/>
+```docker-compose build``` <br/>
+```docker-compose up``` <br/>
 
 ### Post that
 
