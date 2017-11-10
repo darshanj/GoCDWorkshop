@@ -1,29 +1,26 @@
-# GoCD setup for workshop
 
-This codebase sets up GoCD containers to compile and publish a
-docker image from a sample application
+### Setup postgres DB in cluster
+Run db-install in pipelines
 
-### Commands:
+### Steps to set up infrastruce
 
-```docker-compose build``` <br/>
-```docker-compose up``` <br/>
+##### Setup docker go-agent
 
-### Post that
+```docker exec -it gocdworkshop_go-agent-docker_1 bash``` <br />
+```chown go:go /var/run/docker.sock```
 
-Change DOCKERHUB_USER and DOCKERHUB_PASSWORD in your go-server for following environments:
+##### Setup deployment go-agent
 
- 1. http://localhost:8153/go/environments/contacts-ui-docker/show
- 2. http://localhost:8153/go/environments/contacts-api-docker/show
- 3. http://localhost:8153/go/environments/contacts-db-docker/show
+1. Copy key and crt files
 
+```cp ~/.minikube/ca.crt ~/.minikube/apiserver.key ~/.minikube/apiserver.crt files/go-agent/kube-config/```
 
-### Setup pipelines
-Add following in go cd config:
-```
-<config-repos> 
-	<config-repo pluginId="yaml.config.plugin" id="repo1"> <git url="https://github.com/darshanj/contacts-ui.git" /> 
-	</config-repo> 
-	<config-repo pluginId="yaml.config.plugin" id="repo2"> <git url="https://github.com/darshanj/contacts-api.git" /> 
-	</config-repo> 
-</config-repos>
-```
+2. Check if deployment goagent is able to access minikube
+
+```docker exec -it gocdworkshop_go-agent-deployment_1 bash``` <br />
+```su - go``` <br />
+```kubectl get nodes``` <br />
+
+## Note: 
+If you face issues with docker go agent throwing this error 'Cannot connect to the Docker daemon.',
+please run this command in that Go agent ```chown go:go /var/run/docker.sock```
