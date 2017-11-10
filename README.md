@@ -15,3 +15,15 @@ Change DOCKERHUB_USER and DOCKERHUB_PASSWORD in your go-server for following env
  1. http://localhost:8153/go/environments/contacts-ui-docker/show
  2. http://localhost:8153/go/environments/contacts-api-docker/show
  3. http://localhost:8153/go/environments/contacts-db-docker/show
+
+
+### Setup pipelines
+Add following in go cd config:
+```
+<config-repos> 
+	<config-repo pluginId="yaml.config.plugin" id="repo1"> <git url="https://github.com/darshanj/contacts-ui.git" /> 
+	</config-repo> 
+	<config-repo pluginId="yaml.config.plugin" id="repo2"> <git url="https://github.com/darshanj/contacts-api.git" /> 
+	</config-repo> 
+</config-repos>
+```
